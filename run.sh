@@ -25,6 +25,7 @@ j2 /root/conf/recipient_access > /etc/postfix/recipient_access
 j2 /root/conf/sasl_passwd > /etc/postfix/sasl_passwd
 postmap /etc/postfix/sasl_passwd
 postmap /etc/postfix/recipient_access
+postmap /etc/postfix/sender_access
 
 # Custom aliases
 newaliases
