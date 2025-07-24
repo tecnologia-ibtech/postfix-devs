@@ -32,7 +32,7 @@ smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
 # information on enabling SSL in the smtp client.
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-smtpd_sender_restrictions = check_sender_access hash:/etc/postfix/sender_access, reject
+smtpd_recipient_restrictions = check_recipient_access hash:/etc/postfix/recipient_access, reject
 
 myhostname = {{ RELAY_HOST_NAME }}
 alias_maps = hash:/etc/aliases
