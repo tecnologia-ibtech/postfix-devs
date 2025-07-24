@@ -20,6 +20,7 @@ echo $RELAY_HOST_NAME > /etc/mailname
 
 # Templates
 j2 /root/conf/postfix-main.cf > /etc/postfix/main.cf
+j2 /root/conf/sender_access > /etc/postfix/sender_access
 j2 /root/conf/sasl_passwd > /etc/postfix/sasl_passwd
 postmap /etc/postfix/sasl_passwd
 
